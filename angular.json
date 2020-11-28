@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "singlePageApp"
+    }
+  },
+  "defaultProject": "singlePageApp",
+  "cli": {
+    "analytics": false
+  }
 }
