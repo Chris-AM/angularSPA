@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Messages } from '../shared/constants/messages';
+import _ from 'lodash';
+import { MESSAGES } from '../shared/constants/messages';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,12 +8,14 @@ import { Messages } from '../shared/constants/messages';
 })
 export class HomeComponent implements OnInit {
 
-  private messages = new Messages();
-  pageName = this.messages.pageName;
-  about = this.messages.about;
+  
+  pageName = '';
+  info = '';
   constructor() { }
 
   ngOnInit(): void {
+    this.pageName = _.get(MESSAGES, 'HOME.PAGE_NAME');
+    this.info = _.get(MESSAGES, 'HOME.INFO');
   }
 
 }

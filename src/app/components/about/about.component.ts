@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Messages } from '../shared/constants/messages';
+import _ from 'lodash';
+import { MESSAGES } from '../shared/constants/messages';
 
 @Component({
   selector: 'app-about',
@@ -8,12 +9,14 @@ import { Messages } from '../shared/constants/messages';
 })
 export class AboutComponent implements OnInit {
 
-  private messages = new Messages();
-  aboutPage = this.messages.aboutPage;
-  infor = this.messages.infor
+  
+  aboutPage = '';
+  why_page = '';
   constructor() { }
 
   ngOnInit(): void {
+    this.aboutPage = _.get(MESSAGES, 'ABOUT.ABOUT_PAGE');
+    this.why_page = _.get(MESSAGES, 'ABOUT.WHY_PAGE');
   }
 
 }

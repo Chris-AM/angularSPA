@@ -1,1 +1,16 @@
-<p>heroes works!</p>
+<div class="container">
+    <div class="bB1px">
+        <h1> {{heroe.nombre | uppercase}} <span class="fS-50p"> ({{heroe.aparicion | date: 'y'}}) </span></h1>
+    </div>
+    <div class="row">
+        <div class="col-md-4 mt-3 mb-2">
+            <img [src]="heroe.img" class="img-fluid" [alt]="heroe.nombre">
+        </div>
+        <div class="col-md-8">
+            <h3> {{heroe.nombre}} </h3>
+            <p> {{heroe.bio}} </p>
+            <img [src]="heroe.casaImg" class="img-fluid mw50p" [alt]="heroe.casaImg">
+        </div>
+    </div>
+    <button class="btn btn-outline-danger btn-lg" [routerLink]="['/listHeroes']"> Volver </button>
+</div>
