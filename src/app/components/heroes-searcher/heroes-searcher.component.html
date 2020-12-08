@@ -7,13 +7,5 @@
 </div>
 
 <div class="card-columns">
-    <div class="card animated fadeIn fast" *ngFor="let heroe of heroArray; let i = index">
-        <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
-        <div class="card-body">
-            <h5 class="card-title">{{heroe.nombre}}</h5>
-            <p class="card-text">{{heroe.bio}} </p>
-            <p class="card-text"><small class="text-muted">{{heroe.aparicion | date: 'MM/yyyy'}}</small></p>
-            <button (click)="findHero(i)" type="button" class="btn btn-outline-primary btn-block">Learn more </button>
-        </div>
-    </div>
+    <app-cards-of-heroes [heroe]="heroe" [index]="i" *ngFor="let heroe of heroArray; let i = index"></app-cards-of-heroes>
 </div>
