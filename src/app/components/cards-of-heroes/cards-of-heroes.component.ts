@@ -22,7 +22,7 @@ export class CardsOfHeroesComponent implements OnInit {
   }
 
   findHero() {
-  /* this.router.navigate(['/heroes', this.index]) */
-    this.pickHero.emit(this.index);
+  this.router.navigate(['/heroes', this.index])
+  /*this.pickHero.emit(this.index);*/
   }
 }

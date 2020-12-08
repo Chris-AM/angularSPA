@@ -1,4 +1,5 @@
 export interface Heroes{
+  index?: number;
   nombre: string;
   bio: string;
   img: string;

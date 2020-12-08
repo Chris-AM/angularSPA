@@ -34,7 +34,7 @@ export class HeroesSearcherComponent implements OnInit {
     this.searching = _.get(MESSAGES, 'HEROES_SEARCHING.SEARCHING');
   }
   findHero(searchTerm) {
-    this.router.navigate(['/heroes/', searchTerm])
+    this.router.navigate(['/heroes', searchTerm])
     
   }
 

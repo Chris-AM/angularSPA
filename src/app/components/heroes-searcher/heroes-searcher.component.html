@@ -7,5 +7,5 @@
 </div>
 
 <div class="card-columns">
-    <app-cards-of-heroes [heroe]="heroe" [index]="i" *ngFor="let heroe of heroArray; let i = index"></app-cards-of-heroes>
+    <app-cards-of-heroes [heroe]="heroe" [index]="heroe.index" *ngFor="let heroe of heroArray"></app-cards-of-heroes>
 </div>
