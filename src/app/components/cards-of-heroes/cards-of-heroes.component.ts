@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,12 +10,19 @@ export class CardsOfHeroesComponent implements OnInit {
 
   @Input() heroe: any = {};
   @Input() index: number;
-  constructor(private router: Router) { }
+  //I'm creating a JS Event
+  @Output() pickHero: EventEmitter<number>;
+
+  constructor(private router: Router) {
+    //Initializing the EventEmitter
+    this.pickHero = new EventEmitter();
+  }
 
   ngOnInit(): void {
   }
 
   findHero() {
-    this.router.navigate(['/heroes', this.index])
+  /* this.router.navigate(['/heroes', this.index]) */
+    this.pickHero.emit(this.index);
   }
 }

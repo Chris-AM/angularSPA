@@ -2,5 +2,5 @@
 <h1> <span>{{where_from}}</span> {{heroes}} </h1>
 
 <div class="card-columns">
-    <app-cards-of-heroes [heroe]="heroe" [index]="i" *ngFor="let heroe of heroesArray; let i = index"></app-cards-of-heroes>
+    <app-cards-of-heroes (pickHero)="findHero($event)" [heroe]="heroe" [index]="i" *ngFor="let heroe of heroesArray; let i = index"></app-cards-of-heroes>
 </div>
